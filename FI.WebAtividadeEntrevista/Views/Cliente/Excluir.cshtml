@@ -1,0 +1,13 @@
+﻿@model WebAtividadeEntrevista.Models.ClienteModel
+@{
+    ViewBag.Title = "Excluir Cliente";
+}
+@section scripts{
+<script>
+        var urlPost = '@Url.Action("Exclusao", "Cliente", new { area = "" })';
+        var urlRetorno = '@Url.Action("Index", "Cliente", new { area = "" })';
+</script>
+    @Scripts.Render("~/bundles/altClientes")
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("Forms")
